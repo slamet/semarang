@@ -1,0 +1,35 @@
+<% if notice %>
+<p id="notice"><%= notice %></p>
+<% end %>
+
+
+<h1>Products List</h1>
+
+<% @products.each do |product| %>
+  <ul class="pricing_table">
+	<li>
+        <div class="footer">
+			<h3>Product <%= product.id %></h3>
+		</div>
+		<h3><%= product.title %></h3>
+		<h2><%= number_to_currency(product.price) %></h2>
+		<div class="price_body">
+
+         
+			<div class="price">
+				<%= image_tag(product.image_url) %>
+			</div>
+		</div>
+		<div class="features">
+			<ul>
+				<li><%= sanitize(product.description) %></li>
+				
+			</ul>
+		</div>
+		<div class="footer">
+			<%= button_to 'Add to Cart', line_items_path(product_id: product), :class => "button big" %>
+		</div>
+	</li>
+</ul>
+<% end %>
+

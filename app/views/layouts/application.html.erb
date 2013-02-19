@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Trust</title>
+  <%= stylesheet_link_tag    "application", :media => "all" %>
+  <%= javascript_include_tag "application" %>
+  <%= stylesheet_link_tag 'custom', :media => 'screen' %>
+    <%= stylesheet_link_tag 'price', :media => 'screen' %>
+     <%= stylesheet_link_tag 'gh-buttons', :media => 'screen' %> 
+  <%= csrf_meta_tags %>
+
+
+</head>
+<body>
+<div id="wrap">
+  <div id="header">
+        <div id="headerleft">
+            <div id="logo"><%= image_tag("rail.png", :alt => "", :class => "round") %></div>
+          <p class="fancy">Masmet Store App <span style="color:#FF9900";>Beta</span></p>
+        </div>
+        <div id="headerright">
+        	<ul>
+            	<li><a href="#">Tour</a></li>
+                <li class="divider">|</li>
+                <li><a href="#">FAQs</a></li>
+                <li class="divider">|</li>
+                <li><a href="#">Contact</a></li>
+                <li class="divider">|</li>
+                <li><a href="login.php">Login</a></li>
+            </ul>
+        </div>
+    </div>
+
+<div id="contents">
+	<div id="innerwrap">
+<div id="leader">
+            	<p class="fancy">Welcome to the Merchant Dashboard. </p>
+            	<p class="fancy">Please sign in to proceed.</p>
+</div>
+<div id="main">	
+	<body class='<%= controller.controller_name %>'>
+<%= yield %>
+</div>
+
+<%= render 'layouts/footer' %>
+</div>
+
+</body>
+</html>
+</html>
