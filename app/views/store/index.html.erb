@@ -9,17 +9,18 @@
   <ul class="pricing_table">
 	<li>
         <div class="footer">
-			<h3>Product <%= product.id %></h3>
+			<h3><%= product.title %></h3>
 		</div>
-		<h3><%= product.title %></h3>
+		<h3></h3>
 		<h2><%= number_to_currency(product.price) %></h2>
-		<div class="price_body">
+		<%= image_tag(product.image_url) %>
+		
 
          
 			<div class="price">
-				<%= image_tag(product.image_url) %>
+				
 			</div>
-		</div>
+		
 		<div class="features">
 			<ul>
 				<li><%= sanitize(product.description) %></li>
