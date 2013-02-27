@@ -10,8 +10,10 @@ end
   # GET /products
   # GET /products.json
   def index
-    @products = Product.all
-
+    #@products = Product.all
+    @products = Product.page(params[:page]).per(5)
+     
+     
     respond_to do |format|
       format.html # index.html.erb
       format.json { render json: @products }

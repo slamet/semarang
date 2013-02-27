@@ -7,6 +7,9 @@ gem 'rails', '3.2.1'
 
 #gem 'sqlite3'
 
+gem 'kaminari'
+gem 'will_paginate', '~> 3.0'
+
 group :development, :test do
   gem 'sqlite3'
 end
