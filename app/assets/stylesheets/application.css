@@ -70,7 +70,7 @@ a:hover{
 	float:left;
 	color:#f3f3f3;
 	text-transform:uppercase;
-	height:70px;
+	height:30px;
 	width:400px;
 	}
 	
@@ -85,7 +85,7 @@ a:hover{
 
 #headerright{
 	float:right;
-	height:40px;
+	height:70px;
 	padding-top:30px;
 	}
 	

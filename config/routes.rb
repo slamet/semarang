@@ -1,4 +1,24 @@
 Aplikasi::Application.routes.draw do
+  get "admin/index"
+  match '/admin', :to => 'admin#index'
+
+  controller :sessions do
+ get 'login' => :new
+ post 'login' => :create
+ delete 'logout' => :destroy
+ end
+
+
+  #get "session/new"
+  match '/session', :to => 'sessions#new'
+match 'store', :to => 'store#index'
+
+  get "sessions/create"
+
+  get "sessions/destroy"
+
+  resources :users
+
   resources :orders
 
   resources :line_items

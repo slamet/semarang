@@ -8,10 +8,16 @@ gem 'rails', '3.2.1'
 #gem 'sqlite3'
 
 gem 'kaminari'
-gem 'will_paginate', '~> 3.0'
+
+gem "thin", "~> 1.5.0"
+gem 'bcrypt-ruby'
 
 group :development, :test do
   gem 'sqlite3'
+  gem 'better_errors'
+	gem "binding_of_caller", "~> 0.6.8"
+	 gem 'meta_request'
+
 end
 group :production do
   gem 'pg'

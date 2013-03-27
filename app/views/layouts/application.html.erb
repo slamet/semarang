@@ -18,14 +18,25 @@
         </div>
         <div id="headerright">
         	<ul>
-            	<li><a href="#">Home</a></li>
+            	<li><%= link_to "home", store_path %></li>
                 <li class="divider">|</li>
                 <li><a href="#">About</a></li>
                 <li class="divider">|</li>
                 <li><a href="#">Contact</a></li>
                 <li class="divider">|</li>
-                <li><a href="#">Login</a></li>
+                <li><%= link_to "Login", login_path %></li>
             </ul>
+            <% if session[:user_id] %>
+ <ul>
+ <li><%= link_to 'Orders', orders_path %></li>
+ <li class="divider">|</li>
+ <li><%= link_to 'Products', products_path %></li>
+ <li class="divider">|</li>
+ <li><%= link_to 'Users', users_path %></li>
+ <li class="divider">|</li>
+ 
+ <li><%= button_to 'Logout', logout_path, :class => "button danger", method: :delete %></li>
+ <% end %>
         </div>
     </div>
 
