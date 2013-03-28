@@ -20,7 +20,7 @@ html, body{
 body{
 	background-color:#007573;
 	width:100%;
-	background-image:url(../images/body_bg.gif);
+	
 	background-repeat:repeat-x;
 	font-family:Lucida Sans Unicode, Lucida Grande, sans-serif;
 	font-size:13px;
@@ -125,7 +125,7 @@ a:hover{
 	-moz-border-radius: 5px;
 	-webkit-border-radius: 5px;
 	border-radius: 5px; /* future proofing */
-	background-image:url(../images/white_texture_bg.png);
+	
 	position:relative;
 	margin-bottom:40px;
 	}
