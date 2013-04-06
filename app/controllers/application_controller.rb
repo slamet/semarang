@@ -1,7 +1,7 @@
 class ApplicationController < ActionController::Base
   protect_from_forgery
-
-  #before_filter :admin_authorize
+  force_ssl
+  before_filter :admin_authorize
 
   private
 
