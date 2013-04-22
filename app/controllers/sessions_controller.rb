@@ -1,5 +1,5 @@
 class SessionsController < ApplicationController
-  skip_before_filter :admin_authorize
+  #skip_before_filter :admin_authorize
   def new
     @title = "Log in"
   end
@@ -16,6 +16,6 @@ class SessionsController < ApplicationController
 
   def destroy
   	session[:user_id] = nil
-  	redirect_to store_url, notice: "logged out"
+  	redirect_to store_url, notice: 'logged out'
   end
 end
